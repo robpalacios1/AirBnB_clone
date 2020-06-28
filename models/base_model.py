@@ -39,8 +39,8 @@ class BaseModel():
 
     def to_dict(self):
         '''dictionary representation of instance'''
-        new_dict = dict(self.__dict__)
-        new_dict['created_at'] = self.__dict__['created_at'].isoformat()
-        new_dict['updated_at'] = self.__dict__['updated_at'].isoformat()
-        new_dict['__class__'] = self.__class__.__name__
+        new_dict = dict(self._dict_)
+        new_dict['created_at'] = self._dict_['created_at'].isoformat()
+        new_dict['updated_at'] = self._dict_['updated_at'].isoformat()
+        new_dict['_class'] = self.class.name_
         return (new_dict)
