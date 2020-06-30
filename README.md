@@ -1,4 +1,4 @@
-<p align="center" lenght="300" height="600"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" /></p>
+<p align="center"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" width="600" height="400"/></p>
 
 
 # AirBnB clone - The console :ab::rocket:
