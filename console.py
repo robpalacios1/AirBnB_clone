@@ -19,9 +19,6 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             if args in HBNBCommand.classes:
-                '''
-                new_creation = HBNBCommand.class_dict[args]()
-                '''
                 new_creation = eval(args + '()')
                 models.storage.save()
                 print(new_creation.id)
