@@ -12,6 +12,4 @@ class Review(BaseModel):
     def __init__(self, *args, **kwargs):
         '''initialize Review'''
         if kwargs:
-            super().__init__(**kwargs)
-        else:
-            super().__init__
+            super().__init__(*args, **kwargs)
