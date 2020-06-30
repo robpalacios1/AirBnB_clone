@@ -11,6 +11,4 @@ class City(BaseModel):
     def __init__(self, *args, **kwargs):
         '''initialize City'''
         if kwargs:
-            super().__init__(**kwargs)
-        else:
-            super().__init__
+            super().__init__(*args, **kwargs)
