@@ -10,6 +10,4 @@ class Amenity(BaseModel):
     def __init__(self, *args, **kwargs):
         '''initialize Amenity'''
         if kwargs:
-            super().__init__(**kwargs)
-        else:
-            super().__init__
+            super().__init__(*args, **kwargs)
