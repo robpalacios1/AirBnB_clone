@@ -5,6 +5,9 @@ from models.base_model import BaseModel
 from models.user import User
 import json
 
+classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+           "Place": Place, "Review": Review, "State": State, "User": User}
+
 
 class FileStorage:
     '''Represents a class FileStorage'''
