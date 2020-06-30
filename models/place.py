@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 '''class inherent of Base Model'''
+from models.base_model import BaseModel
 
 
 class Place(BaseModel):
