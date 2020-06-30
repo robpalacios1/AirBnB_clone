@@ -1,5 +1,5 @@
-<p align="center"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" /></p>
-##
+<p align="center" lenght="300" height="600"><img src= "https://media.itsnicethat.com/original_images/563b97a87fa44cff9d001760.gif" /></p>
+
 
 # AirBnB clone - The console :ab::rocket:
 The AirBnB clone project starts now until… the end of the first year. The goal of the project is to deploy on your server a simple copy of the AirBnB website. 
@@ -25,8 +25,8 @@ This shell receive the name of `K-shell`, because represent our region, `la cost
 ## Installation :floppy_disk:
 
 ### Requirements
- - Gcc >= 4.8.4
- - Linux
+ - Python 3.4
+ - PEP 8
 
 ### Steps
  - `git clone https://github.com/davixcky/simple_shell.git shell`
@@ -88,4 +88,4 @@ commands.c  environment.c  error.h  general.h  main.c  printers.c     printers_o
 </p>
 
 ## Contributors  
-[@Hugo Fernel - Github](https://github.com/hfsantiago) - [@David Orozco - Github](https://github.com/davixcky) 
+[@Hugo Santiago - Github](https://github.com/hfsantiago) - [@Roberto Palacios - Github](https://github.com/robpalacios1) 
