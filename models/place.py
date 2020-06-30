@@ -20,6 +20,4 @@ class Place(BaseModel):
     def __init__(self, *args, **kwargs):
         '''initialize Place'''
         if kwargs:
-            super().__init__(**kwargs)
-        else:
-            super().__init__()
+            super().__init__(*args, **kwargs)
