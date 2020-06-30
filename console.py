@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 '''Method Command Interpreter'''
-​
 import cmd
 import shlex
 import models
 from models.user import User
 from models.base_model import BaseModel
-​
-​
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
     classes = {"BaseModel"}
