@@ -2,6 +2,7 @@
 '''class inherent of BaseModel'''
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
     '''class Review'''
     def __init__(self, *args, **kwargs):
