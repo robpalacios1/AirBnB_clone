@@ -1,16 +1,17 @@
 #!/usr/bin/python3
 '''Method Command Interpreter'''
-
+​
 import cmd
 import shlex
 import models
+from models.user import User
 from models.base_model import BaseModel
-
-
+​
+​
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
     classes = {"BaseModel"}
-
+​
     def do_create(self, args):
         '''Create a new instance of BaseModel, save it and prints the id
            Usage: create <class name>
@@ -24,7 +25,7 @@ class HBNBCommand(cmd.Cmd):
                 print(new_creation.id)
             else:
                 print("** class doesn't exist **")
-
+​
     def do_show(self, args):
         '''Prints the string representation of a specific instance
            Usage: show <class name> <id>
@@ -43,7 +44,7 @@ class HBNBCommand(cmd.Cmd):
                 print(obj[key_value])
             else:
                 print("** no instance found **")
-
+​
     def do_destroy(self, args):
         '''Delete an instance
            Usage: destroy <class name> <id>
@@ -62,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
                 models.storage.save()
             except KeyError:
                 print(" ** no instance found **")
-
+​
     def do_all(self, args):
         '''Print a string representation of all instances
            Usage: all <class name>
@@ -85,7 +86,7 @@ class HBNBCommand(cmd.Cmd):
             for key, value in models.storage.all().items():
                 new_list.append(str(models.storage.all()[key]))
             print(new_list)
-
+​
     def do_update(self, args):
         '''update an instance
            Usage update <class name> <id> <attribute name> "<attribute value>"
@@ -114,24 +115,24 @@ class HBNBCommand(cmd.Cmd):
             else:
                 setattr(new_dict[key], strings[2], strings[3])
                 models.storage.save()
-
+​
     def do_quit(self, args):
         '''<Quit> Command To Exit The Program'''
         raise SystemExit
-
+​
     def do_EOF(self, args):
         '''Handles end of file'''
         return True
-
+​
     def do_help(self, args):
         '''help'''
         cmd.Cmd.do_help(self, args)
-
+​
     def emptyline(self):
         '''dont execute anything when user
            press enter an empty line
         '''
         pass
-
+​
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
