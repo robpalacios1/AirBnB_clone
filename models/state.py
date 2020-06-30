@@ -10,6 +10,4 @@ class State(BaseModel):
     def __init__(self, *args, **kwargs):
         '''initialize State'''
         if kwargs:
-            super().__init__(**kwargs)
-        else:
-            super().__init__
+            super().__init__(*args, **kwargs)
