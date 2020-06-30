@@ -13,6 +13,4 @@ class User(BaseModel):
     def __init__(self, *args, **kwargs):
         '''initialize User'''
         if kwargs:
-            super().__init__(**kwargs)
-        else:
-            super().__init__
+            super().__init__(*args, **kwargs)
