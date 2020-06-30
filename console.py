@@ -5,6 +5,7 @@ import cmd
 import shlex
 import models
 import sys
+from datetime import datetime
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models.user import User
@@ -99,9 +100,11 @@ class HBNBCommand(cmd.Cmd):
         '''update an instance
            Usage update <class name> <id> <attribute name> "<attribute value>"
         '''
-        strings = shlex.split(args)
-        models.storage.reload()
-        new_dict = models.storage.all
+        strings = args.split()
+        new_dict = models.storage.all()
+        key = strings[0] + '.' + strings[1]
+        new_dict[key].__dict__[strings[2]] = strings[3]
+        new_dict[key].__dict__["updated_at"] = datetime.now()
         if len(strings) == 0:
             print("** class name missing **")
         elif strings[0] not in HBNBCommand.classes:
