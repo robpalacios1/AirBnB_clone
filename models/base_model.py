@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-'''module 'base_model'''
+'''module base_model'''
 
 
 import uuid
 from datetime import datetime
-
 import models
 
 
