@@ -4,6 +4,7 @@
 import cmd
 import shlex
 import models
+from models.user import User
 from models.base_model import BaseModel
 
 
