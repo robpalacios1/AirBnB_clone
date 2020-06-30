@@ -2,7 +2,6 @@
 '''Method Command Interpreter'''
 
 import cmd
-import datetime from datetime
 import shlex
 import models
 import sys
@@ -16,12 +15,10 @@ from models.place import Place
 from models.review import Review
 
 
-classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
-           "Place": Place, "Review": Review, "State": State, "User": User}
-
-
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
+    classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+               "Place": Place, "Review": Review, "State": State, "User": User}
 
     def do_create(self, args):
         '''Create a new instance of BaseModel, save it and prints the id
