@@ -129,7 +129,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, args):
         '''<Quit> Command To Exit The Program'''
-        raise SystemExit
+        return True
 
     def do_EOF(self, args):
         '''Handles end of file'''
