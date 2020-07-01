@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             for obj in objects.values():
                 new_list.append(obj.__str__())
-                print(new_list)
+            print(new_list)
         elif args[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         else:
@@ -109,29 +109,24 @@ class HBNBCommand(cmd.Cmd):
 
         if len(args) == 0:
             print("** class name missing **")
+        elif args[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
         elif len(args) == 1:
-            if args[0] not in HBNBCommand.__classes:
-                print("** class doesn't exist **")
-            else:
-                print("** instance id missing **")
+            print("** instance id missing **")
         elif len(args) == 2:
-            key_find = args[0] + '.' + args[1]
-            if key_find not in objects:
-                print('** no instance found **')
-            else:
-                print("** attribute name missing **")
+            print("** attribute name missing **")
         elif len(args) == 3:
             print("** value missing **")
-        elif len(args) >= 4:
-            obj = objects[args[0] + '.' + args[1]]
+        else:
+            key_find = args[0] + '.' + args[1]
+            obj = objects.get(key_find, None)
 
-            if args[2] in obj.__dict__:
-                val_type = type(obj.__dict__[args[2]])
-                obj.__dict__[args[2]] = eval(args[3])
-            else:
-                obj.__dict__[args[2]] = eval(args[3])
+            if not obj:
+                print("** no instance found **")
+                return
 
-        models.storage.save()
+            setattr(obj, args[2], args[3].lstrip('"').rstrip('"'))
+            models.storage.save()
 
     def check_class_name(self, name=""):
         """Check if stdin user typed class name and id."""
