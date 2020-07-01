@@ -1,54 +1,50 @@
 #!/usr/bin/python3
-"""Unittest cases for review"""
-
+"""Module for test Review class"""
 import unittest
-from models.review import Review
+import json
 import pep8
-import os
+import datetime
+
+from models.review import Review
+from models.base_model import BaseModel
 
 
-class Test_Place(unittest.TestCase):
-    """"Class Review -Unittest """
+class TestReview(unittest.TestCase):
+    """Test Review class implementation"""
+    def test_doc_module(self):
+        """Module documentation"""
+        doc = Review.__doc__
+        self.assertGreater(len(doc), 1)
 
-    def setUp(self):
-        """SetUps tests"""
-        pass
-
-    def tearDown(self):
-        """"Restart tests"""
-        try:
-            os.remove("file.json")
-        except Exception:
-            pass
-
-    def test_pep8_base_model(self):
-        """ Test for PEP8 ok. """
+    def test_pep8_conformance_review(self):
+        """Test that models/review.py conforms to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/review.py'])
-        self.assertEqual(result.total_errors, 0, "Please fix pep8")
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
-    def test_pep8_tests_base(self):
-        """ Test for PEP8 ok. """
+    def test_pep8_conformance_test_review(self):
+        """Test that tests/test_models/test_review.py conforms to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(
-            ['tests/test_models/test_review.py'])
-        self.assertEqual(result.total_errors, 0, "Please fix pep8")
+        res = pep8style.check_files(['tests/test_models/test_review.py'])
+        self.assertEqual(res.total_errors, 1,
+                         "Found code style errors (and warnings).")
 
-    def test_docstring(self):
-        """Checks if docstring exists"""
-        self.assertTrue(len(Review.__doc__) > 1)
-        self.assertTrue(len(Review.__init__.__doc__) > 1)
-        self.assertTrue(len(Review.__str__.__doc__) > 1)
-        self.assertTrue(len(Review.save.__doc__) > 1)
-        self.assertTrue(len(Review.to_dict.__doc__) > 1)
+    def test_doc_constructor(self):
+        """Constructor documentation"""
+        doc = Review.__init__.__doc__
+        self.assertGreater(len(doc), 1)
 
-    def test_isinstance(self):
-        """"Test if is an instance of the class"""
-        obj = Review()
-        self.assertIsInstance(obj, Review)
+    def test_class(self):
+        """Validate the types of the attributes an class"""
+        with self.subTest(msg='Inheritance'):
+            self.assertTrue(issubclass(Review, BaseModel))
 
-    def test_args(self):
-        """Arguments to the instance"""
-        b = Review(8)
-        self.assertEqual(type(b).__name__, "Review")
-        self.assertFalse(hasattr(b, "8"))
+        with self.subTest(msg='Attributes'):
+            self.assertIsInstance(Review.place_id, str)
+            self.assertIsInstance(Review.user_id, str)
+            self.assertIsInstance(Review.text, str)
+
+
+if __name__ == '__main__':
+    unittest.main()

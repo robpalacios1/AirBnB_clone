@@ -1,54 +1,49 @@
 #!/usr/bin/python3
-"""Unittest cases for City"""
-
+"""Module for test City class"""
 import unittest
-from models.city import City
+import json
 import pep8
-import os
+import datetime
+
+from models.city import City
+from models.base_model import BaseModel
 
 
-class Test_City(unittest.TestCase):
-    """"Class City -Unittest """
+class TestCity(unittest.TestCase):
+    """Test City class implementation"""
+    def test_doc_module(self):
+        """Module documentation"""
+        doc = City.__doc__
+        self.assertGreater(len(doc), 1)
 
-    def setUp(self):
-        """SetUps tests"""
-        pass
-
-    def tearDown(self):
-        """"Restart tests"""
-        try:
-            os.remove("file.json")
-        except Exception:
-            pass
-
-    def test_pep8_base_model(self):
-        """ Test for PEP8 ok. """
+    def test_pep8_conformance_city(self):
+        """Test that models/city.py conforms to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/city.py'])
-        self.assertEqual(result.total_errors, 0, "Please fix pep8")
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
-    def test_pep8_tests_base(self):
-        """ Test for PEP8 ok. """
+    def test_pep8_conformance_test_city(self):
+        """Test that tests/test_models/test_city.py conforms to PEP8."""
         pep8style = pep8.StyleGuide(quiet=True)
-        result = pep8style.check_files(
-            ['tests/test_models/test_city.py'])
-        self.assertEqual(result.total_errors, 0, "Please fix pep8")
+        res = pep8style.check_files(['tests/test_models/test_city.py'])
+        self.assertEqual(res.total_errors, 0,
+                         "Found code style errors (and warnings).")
 
-    def test_docstring(self):
-        """Checks if docstring exists"""
-        self.assertTrue(len(City.__doc__) > 1)
-        self.assertTrue(len(City.__init__.__doc__) > 1)
-        self.assertTrue(len(City.__str__.__doc__) > 1)
-        self.assertTrue(len(City.save.__doc__) > 1)
-        self.assertTrue(len(City.to_dict.__doc__) > 1)
+    def test_doc_constructor(self):
+        """Constructor documentation"""
+        doc = City.__init__.__doc__
+        self.assertGreater(len(doc), 1)
 
-    def test_isinstance(self):
-        """"Test if is an instance of the class"""
-        obj = City()
-        self.assertIsInstance(obj, City)
+    def test_class(self):
+        """Validate the types of the attributes an class"""
+        with self.subTest(msg='Inheritance'):
+            self.assertTrue(issubclass(City, BaseModel))
 
-    def test_args(self):
-        """Arguments to the instance"""
-        b = City(8)
-        self.assertEqual(type(b).__name__, "City")
-        self.assertFalse(hasattr(b, "8"))
+        with self.subTest(msg='Attributes'):
+            self.assertIsInstance(City.name, str)
+            self.assertIsInstance(City.state_id, str)
+
+
+if __name__ == '__main__':
+    unittest.main()
