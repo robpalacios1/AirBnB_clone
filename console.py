@@ -16,8 +16,15 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb)'
-    classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
-               "Place": Place, "Review": Review, "State": State, "User": User}
+    classes = [
+        "Amenity",
+        "BaseModel",
+        "City",
+        "Place",
+        "Review",
+        "State",
+        "User"
+    ]
 
     def do_create(self, args):
         '''Create a new instance of BaseModel, save it and prints the id
