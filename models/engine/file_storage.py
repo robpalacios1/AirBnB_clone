@@ -11,8 +11,15 @@ from models.state import State
 from models.user import User
 
 
-classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
-           "Place": Place, "Review": Review, "State": State, "User": User}
+classes = [
+    "Amenity",
+    "BaseModel",
+    "City",
+    "Place",
+    "Review",
+    "State",
+    "User"
+]
 
 
 class FileStorage:
