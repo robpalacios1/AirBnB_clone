@@ -78,5 +78,6 @@ class UserTestCase(unittest.TestCase):
         for attr in storage.__dict__:
             if "__objects" in attr:
                 setattr(storage, attr, {})
-        if (os.path.exists("storage.json") and os.path.isfile("storage.json")):
+        if (os.path.exists("storage.json")
+                and os.path.isfile("storage.json")):
             os.remove("storage.json")
