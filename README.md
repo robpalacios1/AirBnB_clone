@@ -11,7 +11,7 @@ This project was created to **Holberton School.**
 
 ## Table of contents :clipboard:
 
- - [Description](https://github.com/davixcky/simple_shell#description-triangular_ruler)
+ - [Description](https://github.com/robpalacios1/AirBnB_clone/#description-triangular_ruler) github.com/robpalacios1/AirBnB_clone/
  - [Installation](https://github.com/davixcky/simple_shell#installation-floppy_disk)
  - [File description](https://github.com/davixcky/simple_shell#file description)
  - [Usage](https://github.com/davixcky/simple_shell#usage-hammer)
