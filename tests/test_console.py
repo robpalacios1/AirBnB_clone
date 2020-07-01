@@ -18,8 +18,8 @@ class test_console(unittest.TestCase):
         con = self.create()
         self.assertTrue(con.onecmd("quit"))
 
-    def test_EQF(self):
+    def test_EOF(self):
         """test for the method EQF
         """
         con = self.create()
-        self.assertTrue(con.onecmd("EQF"))
+        self.assertTrue(con.onecmd("EOF"))
