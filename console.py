@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 '''Method Command Interpreter'''
-
 import cmd
 import shlex
 import models
-import sys
 from datetime import datetime
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
@@ -17,7 +15,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = "(hbnb)"
+    prompt = '(hbnb)'
     classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
                "Place": Place, "Review": Review, "State": State, "User": User}
 
@@ -145,7 +143,7 @@ class HBNBCommand(cmd.Cmd):
         '''dont execute anything when user
            press enter an empty line
         '''
-        pass
+        return False
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
