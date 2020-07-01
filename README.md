@@ -26,11 +26,7 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
  - Access AirBnb directory: `cd AirBnB_clone`
  - Run hbnb(interactively): `./console` and enter command
  - Run hbnb(non-interactively): `echo "<command>" | ./console.py`
-
-### Requirements
- - Python 3.4
- - PEP 8
-
+ 
 ### Steps
  - `git clone https://github.com/davixcky/simple_shell.git shell`
  - `cd shell`
