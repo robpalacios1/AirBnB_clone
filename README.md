@@ -49,10 +49,7 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
 ### Modes
 
 #### Non-interactive
-*Command*
-```
-echo "/bin/ls" | ./hsh
-```
+
 *Output*
 ```
 AUTHORS     commands.h     error.c  execute.c  hsh     permissions.c  printers_err.c  README.md  start.c  text.h          utils_text2.c
