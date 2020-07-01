@@ -32,8 +32,6 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
 
 ## Usage :hammer:
 
-*k_shell* supports two modes `interactive` and `non interactive`.
-
 ### Basic usage
 `./hsh`
 
