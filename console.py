@@ -5,7 +5,7 @@ import shlex
 import models
 from datetime import datetime
 from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
+from models import storage
 from models.user import User
 from models.state import State
 from models.city import City
@@ -126,6 +126,34 @@ class HBNBCommand(cmd.Cmd):
                 obj.__dict__[args[2]] = eval(args[3])
 
         models.storage.save()
+
+    def check_class_name(self, name=""):
+        """Check if stdin user typed class name and id."""
+        if len(name) == 0:
+            print("** class name missing **")
+            return False
+        else:
+            return True
+
+    def check_class_id(self, name=""):
+        """Check class id"""
+        if len(name.split(' ')) == 1:
+            print("** instance id missing **")
+            return False
+        else:
+            return True
+
+    def found_class_name(self, name=""):
+        """Find the name class."""
+        if self.check_class_name(name):
+            args = shlex.split(name)
+            if args[0] in HBNBCommand.__list_class:
+                if self.check_class_id(name):
+                    key = args[0] + '.' + args[1]
+                    return key
+                else:
+                    print("** class doesn't exist **")
+                    return None
 
     def do_quit(self, args):
         '''<Quit> Command To Exit The Program'''
