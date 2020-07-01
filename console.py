@@ -172,7 +172,7 @@ class HBNBCommand(cmd.Cmd):
         '''dont execute anything when user
            press enter an empty line
         '''
-        return False
+        pass
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
