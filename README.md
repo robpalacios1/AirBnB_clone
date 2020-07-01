@@ -30,7 +30,7 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
  
 ## File description :file_folder: 
 ```
-AUTHORS     **models**     error.c  execute.c  hsh     permissions.c  printers_err.c  README.md  start.c  text.h          utils_text2.c
+AUTHORS     /models     error.c  execute.c  hsh     permissions.c  printers_err.c  README.md  start.c  text.h          utils_text2.c
 commands.c  environment.c  error.h  general.h  main.c  printers.c     printers_out.c  shell.h    text.c   tokenization.c  utils_text.c
 ```
 
