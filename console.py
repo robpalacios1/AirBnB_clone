@@ -15,7 +15,7 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
     __classes = [
         "Amenity",
         "BaseModel",
@@ -30,15 +30,15 @@ class HBNBCommand(cmd.Cmd):
         '''Create a new instance of BaseModel, save it and prints the id
            Usage: create <class name>
         '''
-        if not args:
+        args = args.split()
+        if len(args) == 0:
             print("** class name missing **")
+        elif args[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
         else:
-            if args in HBNBCommand.__classes:
-                new_creation = eval(args + '()')
-                models.storage.save()
-                print(new_creation.id)
-            else:
-                print("** class doesn't exist **")
+            new_creation = eval(args[0] + '()')
+            models.storage.save()
+            print(new_creation.id)
 
     def do_show(self, args):
         '''Prints the string representation of a specific instance
