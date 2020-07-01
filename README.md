@@ -19,11 +19,7 @@ This project was created to **Holberton School.**
 
 ## Description :triangular_ruler:
 
-This is a shell written in `c` for final project of `Holberton School`. `k_shell` its based on `sh` and support just the main functionalities.
-
-The project structure can't have source inside directories, because the only way for compile in this case is `gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
-
-This shell receive the name of `K-shell`, because represent our region, `la costa`. `K-shell` stands for `Kayman` that means `caiman` the animal of this region, so represent our culture and our live style. And the other part, `shell` is just the postfix
+The console is the first segment of the `AirBnB project` at `Holberton School` that will collectively cover fundamental concepts of higher level programming. The goal of `AirBnB project` is to eventually deploy our server a simple copy of the `AirBnB Website(HBnB)`. A command interpreter is created in this segment to manage objects for the `AirBnB(HBnB) website.`
 
 ## Installation :floppy_disk:
 
