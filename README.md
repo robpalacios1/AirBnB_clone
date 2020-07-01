@@ -13,6 +13,7 @@ This project was created to **Holberton School.**
 
  - [Description](https://github.com/davixcky/simple_shell#description-triangular_ruler)
  - [Installation](https://github.com/davixcky/simple_shell#installation-floppy_disk)
+ - [File description](https://github.com/davixcky/simple_shell#file description)
  - [Usage](https://github.com/davixcky/simple_shell#usage-hammer)
  - [Example](https://github.com/davixcky/simple_shell#example-computer)
  - [File Structure](https://github.com/davixcky/simple_shell#file-structure-file_folder)
@@ -26,6 +27,8 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
  - Access AirBnb directory: `cd AirBnB_clone`
  - Run hbnb(interactively): `./console` and enter command
  - Run hbnb(non-interactively): `echo "<command>" | ./console.py`
+ 
+## File description 
 
 ## Usage :hammer:
 
