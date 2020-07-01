@@ -100,32 +100,34 @@ class HBNBCommand(cmd.Cmd):
         '''update an instance
            Usage update <class name> <id> <attribute name> "<attribute value>"
         '''
-        strings = args.split()
-        new_dict = models.storage.all()
-        key = strings[0] + '.' + strings[1]
-        new_dict[key].__dict__[strings[2]] = strings[3]
-        new_dict[key].__dict__["updated_at"] = datetime.now()
-        if len(strings) == 0:
+        objects = models.storage.all()
+        args = args.split(" ")
+
+        if len(args) == 0:
             print("** class name missing **")
-        elif strings[0] not in HBNBCommand.classes:
-            print("** class doesn't exist **")
-        elif len(strings) == 1:
-            print("** instance id missing **")
-        elif strings[0] + '.' + strings[1] not in new_dict.keys():
-            print("** no instance found **")
-        elif len(strings) == 2:
-            print("** attribute name missing **")
-        elif len(strings) == 3:
-            print("** value missing **")
-        else:
-            key = strings[0] + '.' + strings[1]
-            if hasattr(new_dict[key], strings[2]):
-                caster = type(getattr(new_dict[key], strings[2]))
-                setattr(new_dict[key], strings[2], caster(strings[3]))
-                models.storage.save()
+        elif len(args) == 1:
+            if args[0] not in HBNBCommand.__classes:
+                print("** class doesn't exist **")
             else:
-                setattr(new_dict[key], strings[2], strings[3])
-                models.storage.save()
+                print("** instance id missing **")
+        elif len(args) == 2:
+            key_find = args[0] + '.' + args[1]
+            if key_find not in objects:
+                print('** no instance found **')
+            else:
+                print("** attribute name missing **")
+        elif len(args) == 3:
+            print("** value missing **")
+        elif len(args) >= 4:
+            obj = objects[args[0] + '.' + args[1]]
+
+            if args[2] in obj.__dict__:
+                val_type = type(obj.__dict__[args[2]])
+                obj.__dict__[args[2]] = eval(args[3])
+            else:
+                obj.__dict__[args[2]] = eval(args[3])
+
+        models.storage.save()
 
     def do_quit(self, args):
         '''<Quit> Command To Exit The Program'''
