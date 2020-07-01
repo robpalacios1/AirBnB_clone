@@ -164,10 +164,6 @@ class HBNBCommand(cmd.Cmd):
         '''Handles end of file'''
         return True
 
-    def do_help(self, args):
-        '''help'''
-        cmd.Cmd.do_help(self, args)
-
     def emptyline(self):
         '''dont execute anything when user
            press enter an empty line
