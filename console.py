@@ -16,7 +16,7 @@ from models.review import Review
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb)'
-    classes = [
+    __classes = [
         "Amenity",
         "BaseModel",
         "City",
@@ -33,7 +33,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print("** class name missing **")
         else:
-            if args in HBNBCommand.classes:
+            if args in HBNBCommand.__classes:
                 new_creation = eval(args + '()')
                 models.storage.save()
                 print(new_creation.id)
@@ -47,7 +47,7 @@ class HBNBCommand(cmd.Cmd):
         strings = args.split()
         if len(strings) == 0:
             print("** class name missing **")
-        elif strings[0] not in HBNBCommand.classes:
+        elif strings[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
         elif len(strings) == 1:
             print("** instance id missing **")
@@ -63,42 +63,41 @@ class HBNBCommand(cmd.Cmd):
         '''Delete an instance
            Usage: destroy <class name> <id>
         '''
-        strings = args.split()
-        if len(strings) == 0:
-            print("** class name missing **")
-        elif strings[0] not in HBNBCommand.classes:
+        args = args.split()
+        objects = models.storage.all()
+
+        if len(args) == 0:
+            print('** class name missing **')
+        elif args[0] not in HBNBCommand.__classes:
             print("** class doesn't exist **")
-        elif len(strings) == 1:
-            print("** instance id missing **")
+        elif len(args) == 1:
+            print('** instance id missing **')
         else:
-            key_value = strings[0] + '.' + strings[1]
-            try:
-                del models.storage.all()[key_value]
+            key_find = args[0] + '.' + args[1]
+            if key_find in objects.keys():
+                objects.pop(key_find, None)
                 models.storage.save()
-            except KeyError:
-                print(" ** no instance found **")
+            else:
+                print('** no instance found **')
 
     def do_all(self, args):
         '''Print a string representation of all instances
            Usage: all <class name>
         '''
-        strings = args.split()
+        args = args.split()
+        objects = models.storage.all()
         new_list = []
-        address_value = 0
-        if len(strings) == 1:
-            if strings[0] not in HBNBCommand.classes:
-                print("** class doesn't exist **")
-            else:
-                for key in models.storage.all().keys():
-                    class_name = key.split('.')
-                    if class_name[0] == strings[0]:
-                        new_list.append(str(models.storage.all()[key]))
-                    else:
-                        continue
+
+        if len(args) == 0:
+            for obj in objects.values():
+                new_list.append(obj.__str__())
                 print(new_list)
+        elif args[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
         else:
-            for key, value in models.storage.all().items():
-                new_list.append(str(models.storage.all()[key]))
+            for obj in objects.values():
+                if obj.__class__.__name__ == args[0]:
+                    new_list.append(obj.__str__())
             print(new_list)
 
     def do_update(self, args):
@@ -154,7 +153,7 @@ class HBNBCommand(cmd.Cmd):
         """Find the name class."""
         if self.check_class_name(name):
             args = shlex.split(name)
-            if args[0] in HBNBCommand.__list_class:
+            if args[0] in HBNBCommand.__classes:
                 if self.check_class_id(name):
                     key = args[0] + '.' + args[1]
                     return key
