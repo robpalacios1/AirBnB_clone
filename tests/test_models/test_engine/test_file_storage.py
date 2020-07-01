@@ -40,20 +40,20 @@ class TestFileStorage(TestCase):
 
         self.assertIsInstance(f.all(), dict)
 
-        def test_example(self):
-            """Checks the methods reload and save"""
-            # Needs to be implemented
-            from models import storage
-            from models.base_model import BaseModel
+    def test_example(self):
+        """Checks the methods reload and save"""
+        # Needs to be implemented
+        from models import storage
+        from models.base_model import BaseModel
 
-            f = FileStorage()
-            all_objs = storage.all()
-            status = os.path.exists(f._FileStorage__file_path)
-            self.assertTrue(status)
+        f = FileStorage()
+        all_objs = storage.all()
+        status = os.path.exists(f._FileStorage__file_path)
+        self.assertTrue(status)
 
-            print("-- Create a new object --")
-            my_model = BaseModel()
-            my_model.name = "Holberton"
-            my_model.my_number = 89
-            my_model.save()
-            print(my_model)
+        print("-- Create a new object --")
+        my_model = BaseModel()
+        my_model.name = "Holberton"
+        my_model.my_number = 89
+        my_model.save()
+        print(my_model)
