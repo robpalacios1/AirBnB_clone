@@ -15,7 +15,7 @@ This project was created to **Holberton School.**
  - [Installation](https://github.com/robpalacios1/AirBnB_clone/#installation-floppy_disk)
  - [File description](https://github.com/robpalacios1/AirBnB_clone/blob/master/README.md#file-description-file_folder)
  - [Example](https://github.com/robpalacios1/AirBnB_clone#example-computer)
- - [File Structure](https://github.com/robpalacios1/AirBnB_clone#contributors)
+ - [Contributors](https://github.com/robpalacios1/AirBnB_clone#contributors)
 
 ## Description :triangular_ruler:
 
