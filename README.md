@@ -41,8 +41,6 @@ AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.m
  - `./hsh` and then type the commands that you want to execute
  - You can type a command and the prompt appear show again
 
-### Non interactive 
-
  - `echo "command" | ./hsh`, command is the command that you want to execute
  - Each time that you execute a command, the shell close
 
