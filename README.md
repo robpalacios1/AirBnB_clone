@@ -32,7 +32,9 @@ A command interpreter to manage our Airbnb clone objects:
 - Update attributes of an object
 - Destroy an object
 
+<p align="center">
 <img src = "https://i.imgur.com/ROvfVRP.png"/>
+ </p>
 
 ## Installation :floppy_disk:
  - Clone this repository: `git clone "https://github.com/robpalacios1/AirBnB_clone.git"`
