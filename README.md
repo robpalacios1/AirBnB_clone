@@ -42,8 +42,9 @@ AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.m
 ## File Structure :file_folder:
 
 ## Example :computer:
+
 <p align="center"> 
-<img src = "hhttps://i.imgur.com/c5lYRnU.png" />
+<img src = "https://i.imgur.com/c5lYRnU.png"/>
 </p>
 
 ## Contributors  
