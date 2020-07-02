@@ -38,6 +38,7 @@ AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.m
 
 <p align="center"> 
 <img src = "https://i.imgur.com/c5lYRnU.png"/>
+<img src = "https://i.imgur.com/9oWdkPQ.png"/>
 </p>
 
 ## Contributors :two_women_holding_hands:  
