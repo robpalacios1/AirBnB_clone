@@ -40,5 +40,5 @@ AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.m
 <img src = "https://i.imgur.com/c5lYRnU.png"/>
 </p>
 
-## Contributors  
+## Contributors :two_women_holding_hands:  
 [@Hugo Santiago - Github](https://github.com/hfsantiago) - [@Roberto Palacios - Github](https://github.com/robpalacios1) 
