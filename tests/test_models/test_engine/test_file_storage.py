@@ -25,7 +25,7 @@ class TestFileStorage(unittest.TestCase):
         """Tests pep8 style"""
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(['models/engine/file_storage.py'])
-        self.assertEqual(p.total_errors, 1, "fix pep8")
+        self.assertEqual(p.total_errors, 0, "fix pep8")
 
     def setUp(self):
         """Sets up the class test"""
