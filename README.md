@@ -34,7 +34,6 @@ AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.m
 
 ```
 
-#### Non-interactive
 
 ## File Structure :file_folder:
 
