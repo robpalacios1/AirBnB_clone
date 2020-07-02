@@ -33,10 +33,8 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
 AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.md    test_save_reload_base_model.py         
 
 ```
-
 `./hsh`
 
-### Interactive
 
  - `./hsh` and then type the commands that you want to execute
  - You can type a command and the prompt appear show again
