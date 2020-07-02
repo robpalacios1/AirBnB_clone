@@ -32,32 +32,16 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
 ```
 AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.md    test_save_reload_base_model.py         
 
-``
- 
-
- - `echo "command" | ./hsh`, command is the command that you want to execute
- - Each time that you execute a command, the shell close
-
-## Example :computer:
-
 ### Modes
 
 #### Non-interactive
 
-*Output*
-```
-AUTHORS     commands.h     error.c  execute.c  hsh     permissions.c  printers_err.c  README.md  start.c  text.h          utils_text2.c
-commands.c  environment.c  error.h  general.h  main.c  printers.c     printers_out.c  shell.h    text.c   tokenization.c  utils_text.c
-```
-<hr>
-
 #### Interactive
-*Command*
-```
-./hsh
+
 ```
 Then the prompt appear, so you can type in the command line, and press return
 **Ex** - `/bin/ls`
+```
 
 *Output*
 ```
@@ -67,6 +51,7 @@ commands.c  environment.c  error.h  general.h  main.c  printers.c     printers_o
 
 ## File Structure :file_folder:
 
+## Example :computer:
 <p align="center"> 
 <img src = "hhttps://i.imgur.com/c5lYRnU.png" />
 </p>
