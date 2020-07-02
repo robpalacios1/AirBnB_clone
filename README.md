@@ -33,9 +33,6 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
 AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.md test_save_reload_base_model.py         
 
 ```
-
-## Usage :hammer:
-
 ### Basic usage
 `./hsh`
 
