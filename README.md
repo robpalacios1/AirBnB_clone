@@ -31,7 +31,7 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
 ## File description :file_folder: 
 ```
 AUTHORS     /models     test_base_model_dict.py  test_base_model.py   README.md          
-                 hell.h    text.c   tokenization.c  utils_text.c
+                 ell.h    text.c   tokenization.c  utils_text.c
 ```
 
 ## Usage :hammer:
