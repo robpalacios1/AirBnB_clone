@@ -9,18 +9,32 @@ The AirBnB clone project starts now until… the end of the first year. The goal
 
 This project was created to **Holberton School.**
 
+
 ## Table of contents :clipboard:
 
  - [Description](https://github.com/robpalacios1/AirBnB_clone/#description-triangular_ruler)
  - [Installation](https://github.com/robpalacios1/AirBnB_clone/#installation-floppy_disk)
  - [File description](https://github.com/robpalacios1/AirBnB_clone/blob/master/README.md#file-description-file_folder)
- - [Usage](https://github.com/davixcky/simple_shell#usage-hammer)
- - [Example](https://github.com/davixcky/simple_shell#example-computer)
- - [File Structure](https://github.com/davixcky/simple_shell#file-structure-file_folder)
+ - [Example](https://github.com/robpalacios1/AirBnB_clone#example-computer)
+ - [Contributors](https://github.com/robpalacios1/AirBnB_clone#contributors)
 
 ## Description :triangular_ruler:
 
 The console is the first segment of the `AirBnB project` at `Holberton School` that will collectively cover fundamental concepts of higher level programming. The goal of `AirBnB project` is to eventually deploy our server a simple copy of the `AirBnB Website(HBnB)`. A command interpreter is created in this segment to manage objects for the `AirBnB(HBnB) website.`
+
+This is the first step towards building our first full web application: the AirBnB clone.
+
+A command interpreter to manage our Airbnb clone objects:
+
+- Create a new object (ex: a new User or a new Place)
+- Retrieve an object from a file, a database etc…
+- Do operations on objects (count, compute stats, etc…)
+- Update attributes of an object
+- Destroy an object
+
+<p align="center">
+<img src = "https://i.imgur.com/ROvfVRP.png"/>
+ </p>
 
 ## Installation :floppy_disk:
  - Clone this repository: `git clone "https://github.com/robpalacios1/AirBnB_clone.git"`
@@ -29,58 +43,18 @@ The console is the first segment of the `AirBnB project` at `Holberton School` t
  - Run hbnb(non-interactively): `echo "<command>" | ./console.py`
  
 ## File description :file_folder: 
+
 ```
-AUTHORS     /models     test_base_model_dict.py  test_base_model.py   README.md          
-          printers.c     printers_out.c  shell.h    text.c   tokenization.c  utils_text.c
+AUTHORS     /models    test_base_model_dict.py    test_base_model.py    README.md    test_save_reload_base_model.py  
+
 ```
-
-## Usage :hammer:
-
-### Basic usage
-`./hsh`
-
-### Interactive
-
- - `./hsh` and then type the commands that you want to execute
- - You can type a command and the prompt appear show again
-
-### Non interactive 
-
- - `echo "command" | ./hsh`, command is the command that you want to execute
- - Each time that you execute a command, the shell close
 
 ## Example :computer:
 
-### Modes
-
-#### Non-interactive
-
-*Output*
-```
-AUTHORS     commands.h     error.c  execute.c  hsh     permissions.c  printers_err.c  README.md  start.c  text.h          utils_text2.c
-commands.c  environment.c  error.h  general.h  main.c  printers.c     printers_out.c  shell.h    text.c   tokenization.c  utils_text.c
-```
-<hr>
-
-#### Interactive
-*Command*
-```
-./hsh
-```
-Then the prompt appear, so you can type in the command line, and press return
-**Ex** - `/bin/ls`
-
-*Output*
-```
-AUTHORS     commands.h     error.c  execute.c  hsh     permissions.c  printers_err.c  README.md  start.c  text.h          utils_text2.c
-commands.c  environment.c  error.h  general.h  main.c  printers.c     printers_out.c  shell.h    text.c   tokenization.c  utils_text.c
-```
-
-## File Structure :file_folder:
-
 <p align="center"> 
-<img src = "hhttps://i.imgur.com/c5lYRnU.png" />
+<img src = "https://i.imgur.com/c5lYRnU.png"/>
+<img src = "https://i.imgur.com/9oWdkPQ.png"/>
 </p>
 
-## Contributors  
+## Contributors :two_women_holding_hands:  
 [@Hugo Santiago - Github](https://github.com/hfsantiago) - [@Roberto Palacios - Github](https://github.com/robpalacios1) 
