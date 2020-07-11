@@ -1,7 +1,7 @@
 .places {
     font-size: 30px;
     padding-left: 30px;
-    text-align: center
+    text-align: center;
 }
 
 .places h1 {
@@ -20,8 +20,6 @@ article {
     border: 1px solid #FF5A5F;
     border-radius: 4px;
     display: inline-block;
-    justify-content: center;
-    position: relative;
 }
 
 article h2 {
